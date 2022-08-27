@@ -1,0 +1,111 @@
+.top-umkm-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.top-umkm-left {
+  width: 35%;
+  height: 100%;
+}
+.top-umkm-left a {
+  color: #fff;
+}
+
+.top-umkm-right {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-umkm-right .top-umkm-card {
+  height: 100%;
+  transition: all .3s ease-in-out;
+  border-radius: 24px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.top-umkm-card-1 {
+  width: 60%;  
+  background-image: url('../img/top-umkm/gorengan.jpg');
+}
+
+.top-umkm-card-2 {
+  width: 20%;
+  background-image: url('../img/top-umkm/batik.jpg');
+}
+
+.top-umkm-card-3 {
+  width: 20%;  
+  background-image: url('../img/top-umkm/bengkel.jpg');
+}
+
+.top-umkm-shadow {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.9065762047006303) 0%, rgba(0,0,0,0) 100%);
+}
+
+.top-umkm-card-inside {
+  z-index: 1;
+  height: 25%;
+  border-radius: 12px;
+  /* transition: all .5s ease-in-out; */
+}
+
+.inside-card-batik {
+  opacity: 0;
+}
+
+.inside-card-bengkel {
+  opacity: 0;
+}
+
+
+/* @media (min-width: 991.98px) {
+ .top-umkm-card-2:hover + .top-umkm-card-1 {
+  width: 25%;
+ } 
+}  */
+
+@media (max-width: 991.98px) {
+  .top-umkm-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .top-umkm-left {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .top-umkm-right {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+  }
+
+  .top-umkm-card {
+    width: 100%;
+  }
+
+  .top-umkm-card-inside {
+    height: 60%;
+    border-radius: 12px;
+  }
+
+  .inside-card-batik {
+   opacity: 1;
+  }
+
+  .inside-card-bengkel {
+    opacity: 1;
+  }
+
+}

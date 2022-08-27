@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+		<!-- Local css -->
     <link rel="stylesheet" href="css/homepage.css">
+		<link rel="stylesheet" href="css/classes.css">
+		<link rel="stylesheet" href="css/top-umkm.css">
+
 </head>
 <body>
 
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark position-absolute" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">umkmroadap</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,16 +24,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active fw-semibold" aria-current="page" href="#carouselExampleCaptions">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#content" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Roadmaps
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#content">Kuliner</a></li>
+						              <li><a class="dropdown-item" href="#content">Busana</a></a></li>
+                          <li><a class="dropdown-item" href="#content">Otomotif</a></li>
+                          <li><a class="dropdown-item" href="#content">Agribisnis</a></li>
+							            <li><a class="dropdown-item fw-semibold" href="#">Lihat Semua ></a></li>
+                        </ul>
+                      </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#">Tentang</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#contact">Kontak</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Masuk</a>
+                        <a class="text-light nav-link navbar-login local-primary-button fw-semibold active rounded d-flex justify-content-center align-items-center" href="#">Masuk</a>
                     </li>
                 </ul>
             </div>
@@ -36,84 +53,162 @@
     </nav>
     <!-- End Navbar-->
 
+    <!-- Hero -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./img/Hero/background.jpg" class="d-block w-100" alt="" style="height: 100vh; object-fit:cover; filter:brightness(25%)">
+            <div class="carousel-caption d-flex flex-column h-75 justify-content-center align-items-center">
+				<h5>UMKM paling terdampak pandemi covid-19</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam vero voluptatum iure doloremque, recusandae vitae laboriosam cum cumque ab.</p>
+                <a href="#Link" class="text-decoration-none text-light local-primary-button py-2 px-3 rounded-3 my-3">Baca selengkapnya ></a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./img/Hero/background2.jpg" class="d-block w-100" alt="..." style="height: 100vh; object-fit:cover; filter:brightness(25%)">
+           <div class="carousel-caption d-flex flex-column h-75 justify-content-center align-items-center">
+				<h5>Profil usaha mikro, kecil dan menengah yang potensial untuk di biayai oleh perbankan </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam vero voluptatum iure doloremque, recusandae vitae laboriosam cum cumque ab.</p>
+                <a href="#Link" class="text-decoration-none text-light local-primary-button py-2 px-3 rounded-3 my-3">Baca selengkapnya ></a>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="./img/Hero/background3.jpg" class="d-block w-100" alt="..." style="height: 100vh; object-fit:cover; filter:brightness(25%)">
+            <div class="carousel-caption d-flex flex-column h-75 justify-content-center align-items-center">
+				<h5>Presiden Jokowi: umkm harus terus didukung agar bisa naik kelas</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam vero voluptatum iure doloremque, recusandae vitae laboriosam cum cumque ab.</p>
+                <a href="#Link" class="text-decoration-none text-light local-primary-button py-2 px-3 rounded-3 my-3">Baca selengkapnya ></a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- Hero End -->
+
 
     <!-- Jumbotron-->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container" style="height: auto">
+    <div class="jumbotron jumbotron-fluid my-5 p-5" id="content">
+        <div class="container d-flex flex-column justify-content-center align-items-center" style="height: auto">
 
             <div class="jumbotron-header" style="width: 100%; height: 30%; display: flex; justify-content: center; flex-direction: column">
-                <h1 style="font-family: 'Quicksand', sans-serif; font-weight: bold; font-size: 1.7rem; margin-top: 50px;">Selamat datang di umkmroadmap 👋</h1>
-                <p class="lead"><strong>umkmroadmap</strong> merupakan sebuah website yang membantu,memandu, membuat roadmap untuk para pembuka Usaha Mikro Kecil Menengah</p>
+                <h1 class="local-header-color" style="font-family: 'Quicksand', sans-serif; font-weight: bold; font-size: 1.7rem; margin-top: 50px;">Selamat datang di umkmroadmap 👋</h1>
+                <p class="lead text-dark fw-semibold"><strong>umkmroadmap</strong> merupakan sebuah website yang membantu,memandu, membuat roadmap untuk para pembuka Usaha Mikro Kecil Menengah</p>
             </div>
 
             <div class="jumbotron-main d-flex justify-content-evenly flex-wrap gap-4" style="width: 100%; height: auto; margin: 70px 0">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/kuliner/kuliner.svg" class="card-img-top" alt="...">
+                <div class="card overflow-hidden" style="width: 18rem; border-radius: 24px;">
+                    <img src="img/kuliner/kuliner.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Kuliner</h5>
                         <p class="card-text">Ingin membuka usaha kuliner? Langkah awal yang sangat tepat</p>
-                        <a href="kuliner.html" class="btn btn-primary">Buka</a>
+                        <a href="kuliner.html" class="btn local-primary-button">Buka</a>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
+                <div class="card overflow-hidden" style="width: 18rem; border-radius: 24px;">
                     <img src="img/fashion/fashion.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Fashion</h5>
-                        <p class="card-text">Mulailah berbuka usaha fashion dengan tahapan yang jelas</p>
-                        <a href="fashion.html" class="btn btn-primary">Buka</a>
+                        <h5 class="card-title">Busana</h5>
+                        <p class="card-text">Mulailah berbuka usaha busana dengan tahapan yang jelas</p>
+                        <a href="fashion.html" class="btn local-primary-button">Buka</a>
                     </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="img/otomotif/otomotif.svg" class="card-img-top" alt="...">
+                <div class="card overflow-hidden" style="width: 18rem; border-radius: 24px;">
+                    <img src="img/otomotif/otomotif.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Otomotif</h5>
                         <p class="card-text">Ingin bermain dengan mesin? Ayo mulai langkah demi langkah</p>
-                        <a href="otomotif.html" class="btn btn-primary">Buka</a>
+                        <a href="otomotif.html" class="btn local-primary-button">Buka</a>
+                    </div>
+                </div>
+
+                <div class="card overflow-hidden" style="width: 18rem; border-radius: 24px;">
+                    <img src="img/agribisnis/agribisnis.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agribisnis</h5>
+                        <p class="card-text">Tips Sukses Membangun Usaha Agribisnis</p>
+                        <a href="otomotif.html" class="btn local-primary-button">Buka</a>
                     </div>
                 </div>
             </div>
+
+            <a href="#" class="btn jumbotron-button local-primary-button">Lihat semua umkm ></a>
         </div>
     </div>
     <!-- End Jumbotron-->
 
     <!-- Contact Form -->
-    <div class="contact-form bg-dark d-flex justify-content-center align-items-center" style="width: 100%; height: auto">
-        <div class="left-side">
-            <h1>Atau Hubungi kmi mela</h1>
-        </div>
-        <div class="container d-flex flex-column right-side">
-            <div class="form-header w-auto d-flex justify-content-start mt-5 mb-3">
-                <p class="h3 text-light fw-bold">Hubungi Kami</p>
-            </div>
+    <!-- <div class="contact-form bg-dark d-flex justify-content-center align-items-center" style="width: 100%; height: auto">
+      <div class="left-side">
+          <h1>Atau Hubungi kmi mela</h1>
+      </div>
+      <div class="container d-flex flex-column justify-content-center">
+          <div class="form-header w-auto d-flex justify-content-start mt-5 mb-3">
+              <p class="h3 text-light fw-bold">Hubungi Kami</p>
+          </div>
 
-            <div class="form-section d-flex justify-content-center align-items-center flex-column" style="width: 100%">
-                <form class="d-flex justify-content-center align-items-center flex-column" action="" name="contact-form">
-                    <div class="mb-3" style="width: 100%">
-                        <label for="exampleFormControlInput1" class="form-label text-light fw-bold">Nama</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan nama...">
-                    </div>
-                    <div class="mb-3" style="width: 100%;">
-                        <label for="exampleFormControlInput1" class="form-label text-light fw-bold">Email Address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3" style="width: 100%">
-                        <label for="exampleFormControlTextarea1" class="form-label text-light fw-bold">Pesan</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Masukkan pesan"></textarea>
-                    </div>
+          <div class="form-section d-flex justify-content-center align-items-center flex-column bg-danger" style="width: 100%">
+              <form class="d-flex justify-content-center align-items-center flex-column bg-light" action="" name=" contact-form">
+                  <div class="mb-3" style="width: 100%">
+                      <label for="exampleFormControlInput1" class="form-label text-light fw-bold">Nama</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan nama...">
+                  </div>
+                  <div class="mb-3" style="width: 100%;">
+                      <label for="exampleFormControlInput1" class="form-label text-light fw-bold">Email Address</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3" style="width: 100%">
+                      <label for="exampleFormControlTextarea1" class="form-label text-light fw-bold">Pesan</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Masukkan pesan"></textarea>
+                  </div>
 
-                    <div class="col-12 m-4">
-                        <button class="btn btn-primary" type="submit">Kirim Pesan</button>
-                    </div>
-                </form>
-            </div>
+                  <div class="col-12 m-4">
+                      <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+                  </div>
+              </form>
+          </div>
 
+      </div> -->
+  <!-- </div> -->
+
+    <div class="form-root container-fluid bg-dark" id="contact">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="h3 fw-bold text-center text-light pt-5 pb-3">Hubungi Kami</div>
+            <form class="w-50 p-5 mb-5">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Email">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label text-light">Nama</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Masukkan nama">
+                </div>
+                <div class="mb-3">
+                    <label for="floatingTextarea" class="text-light">Pesan</label>
+                    <textarea class="form-control" placeholder="Masukkan Pesan" id="floatingTextarea"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary my-4">Kirim Pesan</button>
+              </form>
         </div>
     </div>
 
 
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </body>
 </html>
